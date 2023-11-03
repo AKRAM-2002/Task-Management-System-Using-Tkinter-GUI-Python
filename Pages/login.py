@@ -16,12 +16,36 @@ def login():
     password = pwd.get()
 
     if username == 'admin' and password == '123':
-        print('Hello Admin')
+        screen = Toplevel(root)
+        screen.title("App")
+        screen.geometry('925x500+300+200')
+        screen.config(bg="white")
+
+
+        Label(screen, text='Hello Everyone', bg ="#fff", font=('Calibiri(Body)', 50, 'bold')).pack(expand=True)
+
+        screen.mainloop()
+
+
+    elif username != 'admin' and password != '123':
+        messagebox.showerror("Invalid","Invalid Username and Password")
+
+
+    elif password != '123':
+        messagebox.showerror("Invalid","Invalid Password")
+
+
+    elif username != 'admin':
+        messagebox.showerror("Invalid","Invalid Username")
+
+
+
+
 
 #img = PhotoImage(file='Task-Management-System-Using-Tkinter-GUI-Python/assets/login1.png')
 
 image = Image.open("Task-Management-System-Using-Tkinter-GUI-Python/assets/login1.png")
- 
+
 # Resize the image using resize() method
 resize_image = image.resize((450, 400))
  
