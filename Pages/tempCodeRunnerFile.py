@@ -1,1 +1,1 @@
-white
+from PIL import Image, ImageTk
